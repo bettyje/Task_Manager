@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class TaskModel extends Model
 {
     protected $table = 'tasks';
+
     protected $primaryKey = 'id';
 
     protected $allowedFields = [
@@ -14,4 +15,8 @@ class TaskModel extends Model
         'description',
         'completed'
     ];
+
+    protected $useTimestamps = false; 
+
+    protected $returnType = 'array';
 }
