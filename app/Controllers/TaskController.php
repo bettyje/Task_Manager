@@ -39,7 +39,7 @@ class TaskController extends ResourceController
         ]);
     }
 
-    // GET /tasks
+    // GET 
     public function index()
     {
         $page  = $this->request->getGet('page') ?? 1;
@@ -79,19 +79,42 @@ class TaskController extends ResourceController
 
     // PATCH 
     public function update($id = null)
-    {
-        $task = $this->model->find($id);
+{
+    $task = $this->model->find($id);
 
-        if (!$task) {
-            return $this->failNotFound('Task not found');
-        }
-
-        $data = $this->request->getJSON(true);
-
-        $this->model->update($id, $data);
-
-        return $this->respond(['message' => 'Updated']);
+    if (!$task) {
+        return $this->failNotFound('Task not found');
     }
+
+    $data = $this->request->getJSON(true);
+
+    $updateData = [];
+
+    if (isset($data['completed'])) {
+        $updateData['completed'] = $data['completed'] ? 1 : 0;
+    }
+
+    if (isset($data['title'])) {
+        $updateData['title'] = trim($data['title']);
+    }
+
+    if (array_key_exists('description', $data)) {
+        $updateData['description'] = $data['description'];
+    }
+
+    if (empty($updateData)) {
+        return $this->failValidationErrors('No valid fields to update');
+    }
+
+    if (!$this->model->update($id, $updateData)) {
+        return $this->failServerError('Update failed');
+    }
+
+    return $this->respond([
+        'message' => 'Updated',
+        'data' => $this->model->find($id)
+    ]);
+}
 
     // DELETE 
     public function delete($id = null)

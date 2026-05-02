@@ -1,0 +1,4 @@
+PHP >= 8.0
+CodeIgniter 4
+MySQL
+Composer

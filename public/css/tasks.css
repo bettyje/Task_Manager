@@ -1,0 +1,137 @@
+
+    .container {
+        max-width: 1200px !important;
+        width: 100% !important;
+    }
+
+    .table-wrapper {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .task-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    .task-table th {
+        background: #f8f9fa;
+        padding: 15px 12px;
+        text-align: left;
+        font-weight: 600;
+        color: #333;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .task-table td {
+        padding: 15px 12px;
+        border-bottom: 1px solid #dee2e6;
+        vertical-align: middle;
+    }
+
+    .task-table tr:hover {
+        background: #f8f9fa;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .status-completed {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .status-pending {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .action-buttons button {
+        padding: 6px 12px;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+
+    .btn-toggle {
+        background: #ffc107;
+        color: #333;
+    }
+
+    .btn-toggle:hover {
+        background: #e0a800;
+    }
+
+    .btn-edit {
+        background: #28a745;
+        color: white;
+    }
+
+    .btn-edit:hover {
+        background: #218838;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background: #c82333;
+    }
+
+    .empty {
+        text-align: center;
+        padding: 60px;
+        color: #999;
+        font-size: 16px;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 60px;
+        color: #667eea;
+        font-size: 16px;
+    }
+
+    .task-table th {
+        position: sticky;
+        top: 0;
+        background: #f8f9fa;
+    }
+
+    /* Column widths */
+    .task-table th:nth-child(1) {
+        width: 25%;
+    }
+
+    .task-table th:nth-child(2) {
+        width: 30%;
+    }
+
+    .task-table th:nth-child(3) {
+        width: 15%;
+    }
+
+    .task-table th:nth-child(4) {
+        width: 20%;
+    }
+
+    .task-table th:nth-child(5) {
+        width: 10%;
+    }

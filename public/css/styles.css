@@ -14,7 +14,6 @@ body {
     padding: 20px;
 }
 
-/* Container */
 .container {
     background: #fff;
     border-radius: 20px;
@@ -25,7 +24,6 @@ body {
     animation: slideIn 0.5s ease-out;
 }
 
-/* Header (merged) */
 .header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
@@ -79,7 +77,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Checkbox */
 .checkbox-group {
     display: flex;
     align-items: center;

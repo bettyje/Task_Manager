@@ -106,7 +106,6 @@ function showAlert(message, type) {
     }, 3000);
 }
 
-// Enter key support
 document.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         createTask();
