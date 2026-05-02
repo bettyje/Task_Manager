@@ -32,15 +32,18 @@ Before running the project, ensure you have the following installed:
 
 ```bash
 git clone git@github.com:bettyje/Task_Manager.git
+```
 
 Or simply download and extract it into your htdocs folder.
 
 ### 2. Navigate to Project Folder
-
+```bash
 cd Task_Manager
+```
 ### 3. Install Dependencies
-
+```bash
 composer install
+```
 ### 4. Configure Environment
 Duplicate .env.example and rename it to .env
 ```bash
